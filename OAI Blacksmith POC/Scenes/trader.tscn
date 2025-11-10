@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl0odbhamok5l"]
+
+[ext_resource type="Script" uid="uid://cey1aj71pjiv4" path="res://Scenes/trader.gd" id="1_8q3wq"]
+
+[node name="Trader" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8q3wq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 310.0
+grow_vertical = 2
+
+[node name="VSplitContainer" type="HSplitContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VSplitContainer"]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Panel/VSplitContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CoalBuy" type="Button" parent="Panel/VSplitContainer/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+disabled = true
+text = "Buy Coal: $2"
+
+[node name="CoalSell" type="Button" parent="Panel/VSplitContainer/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+text = "Sell Coal: $1"
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="Panel/VSplitContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="IronOreBuy" type="Button" parent="Panel/VSplitContainer/VBoxContainer/HSplitContainer2"]
+layout_mode = 2
+disabled = true
+text = "Buy Iron Ore: $2"
+
+[node name="IronOreSell" type="Button" parent="Panel/VSplitContainer/VBoxContainer/HSplitContainer2"]
+layout_mode = 2
+text = "Sell Iron Ore: $1"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VSplitContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer/CoalBuy" to="." method="_on_coal_buy_pressed"]
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer/CoalSell" to="." method="_on_coal_sell_pressed"]
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreBuy" to="." method="_on_iron_ore_buy_pressed"]
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreBuy" to="." method="_on_coal_buy_pressed"]
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreSell" to="." method="_on_iron_ore_sell_pressed"]
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreSell" to="." method="_on_coal_sell_pressed"]

@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="OAI Blacksmith POC"
+run/main_scene="uid://kciq7db1gx5j"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Inventory="*res://Scripts/inventory.gd"
+Globals="*res://Scripts/Globals.gd"
+EventBus="*res://Scripts/event_bus.gd"
+
+[rendering]
+
+renderer/rendering_method="mobile"
