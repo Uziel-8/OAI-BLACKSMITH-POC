@@ -19,7 +19,7 @@ var iron_ore_sell := 2
 func _ready() -> void:
 	EventBus.day_changed.connect(_on_day_changed)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.coins >= coal_buy:
 		coal_buy_button.disabled = false
 	if Globals.coins >= iron_ore_buy:
@@ -47,7 +47,6 @@ func _on_coal_sell_pressed() -> void:
 #if/for statement goes here or maybe in process
 	Globals.coins += coal_sell
 	Inventory.remove_item(coal)
-
 
 func _on_iron_ore_sell_pressed() -> void:
 	Globals.coins += iron_ore_sell

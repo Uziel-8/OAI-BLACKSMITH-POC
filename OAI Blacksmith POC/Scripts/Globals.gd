@@ -5,7 +5,12 @@ var max_energy := 5
 
 var day = 1
 
-var coins = 0
+var coins = 0:
+	set(value):
+		if coins != value:
+			coins = value
+			EventBus.coin_changed.emit()
+
 var rent = 0
 
 var exp = 0

@@ -9,7 +9,7 @@ extends GridContainer
 @onready var iron_ore_timer = $MineIronOre/MineIronOreTimer
 @onready var iron_ore_bar = $MineIronOre/MineIronOreBar
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if coal_timer.is_stopped():
 		coal_bar.value = 0
 	else:

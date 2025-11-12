@@ -58,7 +58,7 @@ layout_mode = 2
 
 [connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer/CoalBuy" to="." method="_on_coal_buy_pressed"]
 [connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer/CoalSell" to="." method="_on_coal_sell_pressed"]
-[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreBuy" to="." method="_on_iron_ore_buy_pressed"]
 [connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreBuy" to="." method="_on_coal_buy_pressed"]
-[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreSell" to="." method="_on_iron_ore_sell_pressed"]
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreBuy" to="." method="_on_iron_ore_buy_pressed"]
 [connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreSell" to="." method="_on_coal_sell_pressed"]
+[connection signal="pressed" from="Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreSell" to="." method="_on_iron_ore_sell_pressed"]

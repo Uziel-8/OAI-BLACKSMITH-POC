@@ -165,6 +165,6 @@ offset_right = 420.0
 [connection signal="pressed" from="LevelVBox/MiningGridbox/MineCoal" to="LevelVBox/MiningGridbox" method="_on_mine_coal_pressed"]
 [connection signal="timeout" from="LevelVBox/MiningGridbox/MineCoal/MineCoalTimer" to="LevelVBox/MiningGridbox" method="_on_mine_coal_timer_timeout"]
 [connection signal="pressed" from="LevelVBox/MiningGridbox/MineIronOre" to="LevelVBox/MiningGridbox" method="_on_mine_iron_ore_pressed"]
-[connection signal="timeout" from="LevelVBox/MiningGridbox/MineIronOre/MineIronOreTimer" to="LevelVBox/MiningGridbox" method="_on_mine_coal_timer_timeout"]
 [connection signal="timeout" from="LevelVBox/MiningGridbox/MineIronOre/MineIronOreTimer" to="LevelVBox/MiningGridbox" method="_on_mine_iron_ore_timer_timeout"]
+[connection signal="timeout" from="LevelVBox/MiningGridbox/MineIronOre/MineIronOreTimer" to="LevelVBox/MiningGridbox" method="_on_mine_coal_timer_timeout"]
 [connection signal="pressed" from="EndDay" to="." method="_on_end_day_pressed"]

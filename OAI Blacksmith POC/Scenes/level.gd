@@ -3,11 +3,12 @@ extends Control
 @onready var energy_label = $GameStateLabel/EnergyLabel
 @onready var day_label = $GameStateLabel/DayLabel
 @onready var rent_label = $GameStateLabel/RentLabel
+@onready var coin_label = $LevelVBox/InventoryHbox/CoinQtyLabel
 @onready var end_day_button = $EndDay
 @onready var exp_bar = $ExpBar
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	exp_bar.max_value = Globals.exp_threshold
 	exp_bar.value = Globals.exp
 	#if Globals.day / 7 == int:
@@ -16,7 +17,6 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	EventBus.mined.connect(_on_ore_mined)
-	
 	energy_label.text = str("Energy: ", Globals.energy)
 	day_label.text = str("Day ", Globals.day)
 	rent_label.text = str("Weekly Bill: ", Globals.rent)
@@ -35,6 +35,10 @@ func _on_end_day_pressed() -> void:
 	energy_label.text = str("Energy: ", Globals.energy)
 	day_label.text = str("Day ", Globals.day)
 	EventBus.day_changed.emit()
+
+func _on_coin_added():
+	coin_label.text = str("Coins: ", Globals.coins)
+	print("chaching")
 
 func level_up():
 	pass

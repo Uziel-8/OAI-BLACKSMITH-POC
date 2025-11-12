@@ -6,4 +6,4 @@ signal mined
 signal day_changed
 
 
-signal coin_added
+signal coin_changed
