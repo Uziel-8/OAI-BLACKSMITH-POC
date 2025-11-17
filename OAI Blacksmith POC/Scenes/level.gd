@@ -17,6 +17,7 @@ func _process(_delta: float) -> void:
 
 func _ready() -> void:
 	EventBus.mined.connect(_on_ore_mined)
+	EventBus.coin_changed.connect(_on_coin_changed)
 	energy_label.text = str("Energy: ", Globals.energy)
 	day_label.text = str("Day ", Globals.day)
 	rent_label.text = str("Weekly Bill: ", Globals.rent)
@@ -36,7 +37,7 @@ func _on_end_day_pressed() -> void:
 	day_label.text = str("Day ", Globals.day)
 	EventBus.day_changed.emit()
 
-func _on_coin_added():
+func _on_coin_changed():
 	coin_label.text = str("Coins: ", Globals.coins)
 	print("chaching")
 

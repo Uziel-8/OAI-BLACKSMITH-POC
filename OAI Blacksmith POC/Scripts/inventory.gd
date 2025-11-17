@@ -23,11 +23,15 @@ func add_item(item: Item):
 func remove_item(item: Item):
 	for existing_item in items:
 		if existing_item.item_name == item.item_name:
-			existing_item.stack_size -= item.stack_size
-			print("stacked item:", item.item_name , "new count:", existing_item.stack_size)
+			var amount_to_remove = min(existing_item.stack_size, item.stack_size)
+			
+			existing_item.stack_size -= amount_to_remove
+			
+			print("removed ", amount_to_remove, "x ", item.item_name, ": new count:", existing_item.stack_size)
+			
+			if existing_item.stack_size <= 0:
+				items.erase(existing_item)
+				print("removed ", item.item_name, " from inventory")
 			return
 	
-	items.erase(item.duplicate())
-	print("removed item:", item.item_name)
-	#for this function, it seems to basically be identical to the add function.
-	#use erase instead of append
+	print("item not found: ", item.item_name)
