@@ -8,16 +8,10 @@ extends Control
 @onready var exp_bar = $ExpBar
 
 
-func _process(_delta: float) -> void:
-	exp_bar.max_value = Globals.exp_threshold
-	exp_bar.value = Globals.exp
-	#if Globals.day / 7 == int:
-		#Globals.coins -= Globals.rent
-
-
 func _ready() -> void:
 	EventBus.mined.connect(_on_ore_mined)
 	EventBus.coin_changed.connect(_on_coin_changed)
+	EventBus.xp_changed.connect(_on_xp_changed)
 	energy_label.text = str("Energy: ", Globals.energy)
 	day_label.text = str("Day ", Globals.day)
 	rent_label.text = str("Weekly Bill: ", Globals.rent)
@@ -27,7 +21,7 @@ func _on_ore_mined():
 	#or make higher tier ores require equipment to mine
 	#something to make it not always optimal to mine most valuable ore
 	Globals.energy -= 1
-	Globals.exp += 10
+	Globals.xp += 50
 	energy_label.text = str("Energy: ", Globals.energy)
 
 func _on_end_day_pressed() -> void:
@@ -41,9 +35,11 @@ func _on_coin_changed():
 	coin_label.text = str("Coins: ", Globals.coins)
 	print("chaching")
 
-func level_up():
-	pass
-	#make this
+func _on_xp_changed():
+	exp_bar.value = Globals.xp
+	if Globals.xp >= Globals.xp_threshold:
+		EventBus.level_up.emit()
+		Globals.xp_threshold = Globals.xp_threshold * 1.1
 
 
 #TO DO

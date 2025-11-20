@@ -1,4 +1,4 @@
-res://Scenes/level.gd
-res://Scenes/trader.gd
 res://Scenes/level.tscn
-res://Scripts/inventory.gd
+res://Scripts/Globals.gd
+res://Scenes/level.gd
+res://Scripts/event_bus.gd

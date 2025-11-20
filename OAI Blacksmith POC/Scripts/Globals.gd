@@ -13,10 +13,16 @@ var coins = 0:
 
 var rent = 0
 
-var exp = 0
+var xp = 0:
+	set(value):
+		xp = value
+		EventBus.xp_changed.emit()
+
 var level = 0
 
-var exp_threshold = 100
+var xp_threshold = 100
+
+
 
 #make a level up function!
 #func on level up: xp = 0, level +1, levelthreshold * 1.1
