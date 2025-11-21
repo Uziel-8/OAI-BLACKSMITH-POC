@@ -143,6 +143,12 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "End Day"
 
+[node name="Trader" parent="." instance=ExtResource("4_81xng")]
+visible = false
+layout_mode = 1
+offset_left = 420.0
+offset_right = 420.0
+
 [node name="ExpBar" type="ProgressBar" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -155,12 +161,7 @@ offset_top = -27.0
 offset_right = 131.0
 grow_horizontal = 2
 grow_vertical = 0
-
-[node name="Trader" parent="." instance=ExtResource("4_81xng")]
-visible = false
-layout_mode = 1
-offset_left = 420.0
-offset_right = 420.0
+show_percentage = false
 
 [connection signal="pressed" from="LevelVBox/MiningGridbox/MineCoal" to="LevelVBox/MiningGridbox" method="_on_mine_coal_pressed"]
 [connection signal="timeout" from="LevelVBox/MiningGridbox/MineCoal/MineCoalTimer" to="LevelVBox/MiningGridbox" method="_on_mine_coal_timer_timeout"]

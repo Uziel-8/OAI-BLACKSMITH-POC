@@ -1,4 +1,3 @@
 res://Scenes/level.tscn
-res://Scripts/Globals.gd
 res://Scenes/level.gd
-res://Scripts/event_bus.gd
+res://Scenes/trader.gd

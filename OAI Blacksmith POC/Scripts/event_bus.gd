@@ -8,5 +8,5 @@ signal day_changed
 
 signal coin_changed
 
-signal xp_changed(int)
+signal xp_changed
 signal level_up

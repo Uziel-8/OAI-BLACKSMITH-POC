@@ -5,7 +5,7 @@ extends Control
 @onready var rent_label = $GameStateLabel/RentLabel
 @onready var coin_label = $LevelVBox/InventoryHbox/CoinQtyLabel
 @onready var end_day_button = $EndDay
-@onready var exp_bar = $ExpBar
+@onready var xp_bar = $ExpBar
 
 
 func _ready() -> void:
@@ -33,13 +33,17 @@ func _on_end_day_pressed() -> void:
 
 func _on_coin_changed():
 	coin_label.text = str("Coins: ", Globals.coins)
-	print("chaching")
 
-func _on_xp_changed():
-	exp_bar.value = Globals.xp
+func _on_xp_changed(total: int):
+	xp_bar.value = Globals.xp
+	print(Globals.xp)
 	if Globals.xp >= Globals.xp_threshold:
+		var remainder_xp: int = total - Globals.xp_threshold
 		EventBus.level_up.emit()
 		Globals.xp_threshold = Globals.xp_threshold * 1.1
+		xp_bar.max_value = Globals.xp_threshold
+		Globals.level = Globals.level + 1
+		Globals.xp = remainder_xp
 
 
 #TO DO
@@ -51,3 +55,4 @@ func _on_xp_changed():
 #might need customers in there too
 #create auto mine function
 #make a more modular buy and sell function in trader - prbably events
+#figure out if i need inventory to be resources? would streamline a lot if not. It could probably just be a dictionary

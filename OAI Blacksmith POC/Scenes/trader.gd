@@ -18,7 +18,7 @@ var iron_ore_sell := 2
 
 func _ready() -> void:
 	EventBus.day_changed.connect(_on_day_changed)
-	
+
 
 func _process(_delta: float) -> void:
 	if Globals.coins >= coal_buy:
