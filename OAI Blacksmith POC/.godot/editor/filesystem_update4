@@ -1,3 +1,4 @@
-res://Scenes/level.gd
-res://Scenes/trader.gd
 res://Scenes/level.tscn
+res://Scenes/level.gd
+res://Scripts/Globals.gd
+res://Scenes/mining_gridbox.gd

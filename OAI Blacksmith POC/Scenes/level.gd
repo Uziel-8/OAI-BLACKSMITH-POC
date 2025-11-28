@@ -30,13 +30,17 @@ func _on_end_day_pressed() -> void:
 	energy_label.text = str("Energy: ", Globals.energy)
 	day_label.text = str("Day ", Globals.day)
 	EventBus.day_changed.emit()
+	if Globals.day % 7 == 0:
+		_pay_rent()
+
+func _pay_rent():
+	Globals.coins -= Globals.rent
 
 func _on_coin_changed():
 	coin_label.text = str("Coins: ", Globals.coins)
 
 func _on_xp_changed(total: int):
 	xp_bar.value = Globals.xp
-	print(Globals.xp)
 	if Globals.xp >= Globals.xp_threshold:
 		var remainder_xp: int = total - Globals.xp_threshold
 		EventBus.level_up.emit()

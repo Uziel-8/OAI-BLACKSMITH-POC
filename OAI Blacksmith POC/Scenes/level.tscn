@@ -144,10 +144,9 @@ grow_vertical = 0
 text = "End Day"
 
 [node name="Trader" parent="." instance=ExtResource("4_81xng")]
-visible = false
 layout_mode = 1
 offset_left = 420.0
-offset_right = 420.0
+offset_right = -423.0
 
 [node name="ExpBar" type="ProgressBar" parent="."]
 layout_mode = 1

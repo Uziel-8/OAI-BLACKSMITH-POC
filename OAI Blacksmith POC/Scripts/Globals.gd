@@ -11,7 +11,7 @@ var coins = 0:
 			coins = value
 			EventBus.coin_changed.emit()
 
-var rent = 0
+var rent = 10
 
 var xp = 0:
 	set(value):
@@ -22,3 +22,5 @@ var xp = 0:
 var level = 0
 
 var xp_threshold = 100
+
+var inventory_2 = {"coal": 0, "iron_ore": 0}
