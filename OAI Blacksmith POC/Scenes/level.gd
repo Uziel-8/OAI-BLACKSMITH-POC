@@ -47,7 +47,7 @@ func _on_xp_changed(total: int):
 
 
 #TO DO
-#need a more modular/portable way to create buttons and menus
+#a more modular/portable way to create buttons and menus
 #above notes
 #create smithy node - left pane can be mine, middle trader, right smithy
 #this could be broken in to bars and items

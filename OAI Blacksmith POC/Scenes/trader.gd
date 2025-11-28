@@ -17,6 +17,8 @@ var iron_ore_sell := 2
 @onready var iron_ore = preload("res://Resources/iron_ore.tres")
 
 func _ready() -> void:
+	iron_ore_buy_button.text = str("Buy Iron Ore: $", iron_ore_buy)
+	iron_ore_sell_button.text = str("Sell Iron Ore: $", iron_ore_sell)
 	EventBus.day_changed.connect(_on_day_changed)
 
 
