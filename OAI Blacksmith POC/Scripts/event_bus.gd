@@ -10,3 +10,5 @@ signal coin_changed
 
 signal xp_changed
 signal level_up
+
+signal inventory_changed

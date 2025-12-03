@@ -23,4 +23,17 @@ var level = 0
 
 var xp_threshold = 100
 
-var inventory_2 = {"coal": 0, "iron_ore": 0}
+var inventory: Dictionary = {
+	"coal": 0,
+	"iron_ore": 0
+}
+
+func update_item(item, amount):
+	if inventory.has(item):
+		inventory[item] += amount #update amount of existing item
+	else:
+		inventory[item] = amount #add new item to inventory
+	
+	if inventory[item] <= 0:
+		inventory.erase(item) #remove item when there is 0
+	EventBus.inventory_changed.emit()

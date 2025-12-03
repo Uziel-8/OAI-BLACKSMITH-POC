@@ -13,9 +13,6 @@ var iron_ore_sell := 2
 @onready var iron_ore_buy_button = $Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreBuy
 @onready var iron_ore_sell_button = $Panel/VSplitContainer/VBoxContainer/HSplitContainer2/IronOreSell
 
-@onready var coal = preload("res://Resources/coal.tres")
-@onready var iron_ore = preload("res://Resources/iron_ore.tres")
-
 func _ready() -> void:
 	iron_ore_buy_button.text = str("Buy Iron Ore: $", iron_ore_buy)
 	iron_ore_sell_button.text = str("Sell Iron Ore: $", iron_ore_sell)
@@ -35,28 +32,22 @@ func _on_day_changed():
 func _on_coal_buy_pressed() -> void:
 	if Globals.coins >= coal_buy:
 		Globals.coins -= coal_buy
-		Inventory.add_item(coal)
+		Globals.update_item("coal", 1)
 	else:
 		return
 
 func _on_iron_ore_buy_pressed() -> void:
 	if Globals.coins >= iron_ore_buy:
 		Globals.coins -= iron_ore_buy
-		Inventory.add_item(iron_ore)
+		Globals.update_item("iron_ore", 1)
 	else:
 		return
 
 func _on_coal_sell_pressed() -> void:
-	if Inventory.COAL.stack_size > 0:
-		Globals.coins += coal_sell
-		Inventory.remove_item(coal)
-	else:
-		return
+	Globals.coins += coal_sell
+	Globals.update_item("coal", -1)
+
 
 func _on_iron_ore_sell_pressed():
-	for IRON_ORE in Inventory.items:
-		if iron_ore.stack_size > 0:
-			Globals.coins += iron_ore_sell
-			Inventory.remove_item(iron_ore)
-		else:
-			iron_ore_sell_button.disabled = true
+	Globals.coins += iron_ore_sell
+	Globals.update_item("iron_ore", -1)

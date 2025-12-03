@@ -1,4 +1,6 @@
 res://Scenes/level.tscn
-res://Scenes/level.gd
 res://Scripts/Globals.gd
 res://Scenes/mining_gridbox.gd
+res://Scenes/inventory_hbox.gd
+res://Scripts/event_bus.gd
+res://Scenes/trader.gd
