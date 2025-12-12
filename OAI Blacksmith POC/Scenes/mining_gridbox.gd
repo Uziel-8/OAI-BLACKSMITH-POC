@@ -30,7 +30,7 @@ func _on_mine_coal_timer_timeout() -> void:
 func _on_mine_coal_pressed() -> void:
 	if Globals.energy > 0:
 		mine_coal.disabled = true
-		Globals.update_item("coal", 1)
+		Globals.update_item("coal", 10)
 		coal_timer.start()
 		EventBus.mined.emit()
 	else:
@@ -41,8 +41,7 @@ func _on_mine_coal_pressed() -> void:
 func _on_mine_iron_ore_pressed() -> void:
 	if Globals.energy > 0:
 		mine_iron.disabled = true
-		#Inventory.add_item(iron_ore)
-		Globals.update_item("iron_ore", 1)
+		Globals.update_item("iron_ore", 10)
 		#i want to find a way to change this from emitting manually like this, to emitting automatically when the dict is updated - like coins
 		iron_ore_timer.start()
 		EventBus.mined.emit()

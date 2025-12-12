@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=2 format=3 uid="uid://ciaup1kmd4osb"]
+
+[ext_resource type="Script" uid="uid://6hajeihxbmh0" path="res://Scripts/crafting_recipe.gd" id="1_0oss1"]
+
+[resource]
+script = ExtResource("1_0oss1")
+name = "Iron Shortblade Recipe"
+description = "A recipe to craft a short blade of crude iron, to be combined with a hilt"
+metadata/_custom_type_script = "uid://6hajeihxbmh0"

@@ -23,10 +23,7 @@ var level = 0
 
 var xp_threshold = 100
 
-var inventory: Dictionary = {
-	"coal": 0,
-	"iron_ore": 0
-}
+var inventory: Dictionary = {}
 
 func update_item(item, amount):
 	if inventory.has(item):
