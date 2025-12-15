@@ -1,9 +1,6 @@
-res://Scenes/inventory_hbox.gd
-res://Scenes/mining_gridbox.gd
-res://Scenes/trader.tscn
-res://Scenes/trader.gd
-res://Scenes/level.tscn
-res://Scripts/crafting_recipe.gd
-res://Resources/iron_shortblade.tres
+res://Scenes/smithy.gd
 res://Scenes/smithy.tscn
+res://Scripts/crafting_recipe.gd
 res://Scripts/Globals.gd
+res://Scenes/level.tscn
+res://Scenes/level.gd

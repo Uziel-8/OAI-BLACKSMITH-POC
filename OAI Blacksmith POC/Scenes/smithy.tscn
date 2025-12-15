@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://36kedkar0dt8"]
+[gd_scene load_steps=2 format=3 uid="uid://36kedkar0dt8"]
+
+[ext_resource type="Script" uid="uid://cu3lkvr1s1lrk" path="res://Scenes/smithy.gd" id="1_msrcn"]
 
 [node name="Smithy" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_msrcn")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -15,7 +18,19 @@ anchor_bottom = 1.0
 offset_right = 310.0
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="CraftIronBarButton" type="Button" parent="Panel"]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+text = "CRAFT IRON BAR"
+
+[node name="CraftIronShortbladeButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 39.0
+offset_right = 15.0
+offset_bottom = 47.0
+text = "CRAFT IRON SHORTBLADE"
+
+[connection signal="pressed" from="Panel/CraftIronBarButton" to="." method="_on_craft_iron_bar_button_pressed"]
+[connection signal="pressed" from="Panel/CraftIronShortbladeButton" to="." method="_on_craft_iron_shortblade_button_pressed"]

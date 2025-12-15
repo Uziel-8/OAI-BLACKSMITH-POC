@@ -7,11 +7,14 @@ extends Control
 @onready var end_day_button = $EndDay
 @onready var xp_bar = $ExpBar
 
+@onready var inventory_label = $InventoryPanel/InventoryLabel
+
 
 func _ready() -> void:
 	EventBus.mined.connect(_on_ore_mined)
 	EventBus.coin_changed.connect(_on_coin_changed)
 	EventBus.xp_changed.connect(_on_xp_changed)
+	EventBus.inventory_changed.connect(_on_inventory_changed)
 	energy_label.text = str("Energy: ", Globals.energy)
 	day_label.text = str("Day ", Globals.day)
 	rent_label.text = str("Weekly Bill: ", Globals.rent)
@@ -49,12 +52,16 @@ func _on_xp_changed(total: int):
 		Globals.level = Globals.level + 1
 		Globals.xp = remainder_xp
 
+func _on_inventory_changed():
+	inventory_label.text = str(Globals.inventory)
+
 
 #TO DO
-#a more modular/portable way to create buttons and menus
-#above notes
-#create smithy node - left pane can be mine, middle trader, right smithy
-#this could be broken in to bars and items
+#currently energy reduction is inherently tied to mining, let's pull that out - will probably need a "energy changed" event
+#replace InventoryHbox with the new inventory - partially done, just need to dynamically handle coins - probs just add to inventory TBH
+#make sprites for inv. items - less text everywhere.
+
+
 #trader could have multiple different traders - rename to marketplace or something?
 #might need customers in there too
 #create auto mine function

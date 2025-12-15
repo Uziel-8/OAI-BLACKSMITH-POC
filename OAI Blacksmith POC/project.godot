@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Inventory="*res://Scripts/inventory.gd"
 Globals="*res://Scripts/Globals.gd"
 EventBus="*res://Scripts/event_bus.gd"
+CraftingRecipe="*res://Scripts/crafting_recipe.gd"
 
 [rendering]
 
