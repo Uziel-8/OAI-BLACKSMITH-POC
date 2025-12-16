@@ -3,7 +3,6 @@ extends Control
 @onready var energy_label = $GameStateLabel/EnergyLabel
 @onready var day_label = $GameStateLabel/DayLabel
 @onready var rent_label = $GameStateLabel/RentLabel
-@onready var coin_label = $LevelVBox/InventoryHbox/CoinQtyLabel
 @onready var end_day_button = $EndDay
 @onready var xp_bar = $ExpBar
 
@@ -12,7 +11,6 @@ extends Control
 
 func _ready() -> void:
 	EventBus.mined.connect(_on_ore_mined)
-	EventBus.coin_changed.connect(_on_coin_changed)
 	EventBus.xp_changed.connect(_on_xp_changed)
 	EventBus.inventory_changed.connect(_on_inventory_changed)
 	energy_label.text = str("Energy: ", Globals.energy)
@@ -37,10 +35,8 @@ func _on_end_day_pressed() -> void:
 		_pay_rent()
 
 func _pay_rent():
-	Globals.coins -= Globals.rent
-
-func _on_coin_changed():
-	coin_label.text = str("Coins: ", Globals.coins)
+	Globals.update_item("coin", int(Globals.rent))
+	print(Globals.inventory)
 
 func _on_xp_changed(total: int):
 	xp_bar.value = Globals.xp

@@ -17,3 +17,5 @@ func _on_inventory_changed():
 	coal_label.text = str("Coal: ", Globals.inventory.get("coal"))
 	iron_ore_label.text = str("Iron Ore: ", Globals.inventory.get("iron_ore"))
 	print(Globals.inventory)
+
+#this is obsolete, replaced with inventory direct display "inventory Panel"

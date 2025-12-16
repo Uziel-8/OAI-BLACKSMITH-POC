@@ -1,6 +1,3 @@
 res://Scenes/smithy.gd
 res://Scenes/smithy.tscn
-res://Scripts/crafting_recipe.gd
-res://Scripts/Globals.gd
-res://Scenes/level.tscn
-res://Scenes/level.gd
+res://Scenes/trader.gd

@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://kciq7db1gx5j"]
+[gd_scene load_steps=5 format=3 uid="uid://kciq7db1gx5j"]
 
 [ext_resource type="Script" uid="uid://dwrto3oyofsky" path="res://Scenes/level.gd" id="1_6phgx"]
 [ext_resource type="Script" uid="uid://cbdtos8c4maaq" path="res://Scenes/mining_gridbox.gd" id="1_tumq0"]
-[ext_resource type="Script" uid="uid://dd40h2sa6niy6" path="res://Scenes/inventory_hbox.gd" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://cl0odbhamok5l" path="res://Scenes/trader.tscn" id="4_81xng"]
 [ext_resource type="PackedScene" uid="uid://36kedkar0dt8" path="res://Scenes/smithy.tscn" id="5_wqkje"]
 
@@ -79,23 +78,6 @@ offset_bottom = 23.0
 grow_horizontal = 2
 text = "Iron Ore"
 horizontal_alignment = 1
-
-[node name="InventoryHbox" type="HBoxContainer" parent="LevelVBox"]
-layout_mode = 2
-size_flags_vertical = 3
-script = ExtResource("2_k5f4k")
-
-[node name="CoinQtyLabel" type="Label" parent="LevelVBox/InventoryHbox"]
-layout_mode = 2
-text = "Coins: 0"
-
-[node name="CoalQtyLabel" type="Label" parent="LevelVBox/InventoryHbox"]
-layout_mode = 2
-text = "Coal: 0"
-
-[node name="IronOreQtyLabel" type="Label" parent="LevelVBox/InventoryHbox"]
-layout_mode = 2
-text = "Iron Ore: 0"
 
 [node name="GameStateLabel" type="Panel" parent="."]
 layout_mode = 1

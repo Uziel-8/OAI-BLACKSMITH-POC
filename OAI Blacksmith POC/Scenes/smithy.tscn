@@ -32,5 +32,14 @@ offset_right = 15.0
 offset_bottom = 47.0
 text = "CRAFT IRON SHORTBLADE"
 
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 208.0
+offset_right = 184.0
+offset_bottom = 239.0
+text = "ADD COIN"
+
 [connection signal="pressed" from="Panel/CraftIronBarButton" to="." method="_on_craft_iron_bar_button_pressed"]
 [connection signal="pressed" from="Panel/CraftIronShortbladeButton" to="." method="_on_craft_iron_shortblade_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
