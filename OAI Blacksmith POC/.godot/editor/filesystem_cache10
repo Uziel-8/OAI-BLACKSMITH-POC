@@ -1,21 +1,28 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1765856663
+::res://::1766460899
 icon.svg::CompressedTexture2D::674837351265639347::1763358175::1763358257::1::::<><><>0<>0<>bad4ed1d75c3a1910c1c4ae6d8a592d4<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Graphics/::1766453114
+::res://Graphics/Items/::1766453120
+Coal.png::CompressedTexture2D::163369683485107165::1766453120::1766453120::1::::<><><>0<>0<>1faf418a284cdae64922ff9e1ad4fd79<>res://.godot/imported/Coal.png-f7eace967ec2ac941bc9f8ffe1060eec.ctex::
+Iron Bar.png::CompressedTexture2D::7305334382848571748::1766453120::1766453120::1::::<><><>0<>0<>82792b26fb4a1b39d4f75ff083291ee6<>res://.godot/imported/Iron Bar.png-db53019304ea9e37179df49e1c32acc5.ctex::
+Iron Ore.png::CompressedTexture2D::7434529400620021544::1766453120::1766453120::1::::<><><>0<>0<>cff96d64ed68cdf0168b34ac296c0d30<>res://.godot/imported/Iron Ore.png-3262f43fa1abea1500cb384a74c4d2cf.ctex::
 ::res://Resources/::1765350168
 coal.tres::Resource/Item::4673735498900729283::1763358175::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd
 iron_ore.tres::Resource/Item::7709193493754899063::1763358175::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd
 iron_shortblade.tres::Resource/Recipe::5335594624859902517::1765350168::0::1::::<><><>0<>0<><>::uid://6hajeihxbmh0::::res://Scripts/crafting_recipe.gd
-::res://Scenes/::1765852737
+::res://Scenes/::1766455851
 inventory_hbox.gd::GDScript::7431227408216510535::1765850496::0::1::::<>HBoxContainer<><>0<>0<><>::
-level.gd::GDScript::8739691150302705596::1765850746::0::1::::<>Control<><>0<>0<><>::
-level.tscn::PackedScene::706533185995114897::1765852737::0::1::::<><><>0<>0<><>::uid://dwrto3oyofsky::::res://Scenes/level.gd<>uid://cbdtos8c4maaq::::res://Scenes/mining_gridbox.gd<>uid://cl0odbhamok5l::::res://Scenes/trader.tscn<>uid://36kedkar0dt8::::res://Scenes/smithy.tscn
+inventory_ui.gd::GDScript::8527809369228858594::1766453420::0::1::::<>Control<><>0<>0<><>::
+inventory_ui.tscn::PackedScene::8442815541649957971::1766453420::0::1::::<><><>0<>0<><>::uid://dtq61lglonhp7::::res://Scenes/inventory_ui.gd
+level.gd::GDScript::8739691150302705596::1766455828::0::1::::<>Control<><>0<>0<><>::
+level.tscn::PackedScene::706533185995114897::1766455851::0::1::::<><><>0<>0<><>::uid://dwrto3oyofsky::::res://Scenes/level.gd<>uid://cbdtos8c4maaq::::res://Scenes/mining_gridbox.gd<>uid://cl0odbhamok5l::::res://Scenes/trader.tscn<>uid://36kedkar0dt8::::res://Scenes/smithy.tscn
 mining_gridbox.gd::GDScript::4850402964792589760::1765349370::0::1::::<>GridContainer<><>0<>0<><>::
-smithy.gd::GDScript::6235107692578441960::1765850319::0::1::::<>Control<><>0<>0<><>::
-smithy.tscn::PackedScene::2029897818385843083::1765850319::0::1::::<><><>0<>0<><>::uid://cu3lkvr1s1lrk::::res://Scenes/smithy.gd
-trader.gd::GDScript::5104720973193316735::1765852673::0::1::::<>Control<><>0<>0<><>::
+smithy.gd::GDScript::6235107692578441960::1765857142::0::1::::<>Control<><>0<>0<><>::
+smithy.tscn::PackedScene::2029897818385843083::1765955970::0::1::::<><><>0<>0<><>::uid://cu3lkvr1s1lrk::::res://Scenes/smithy.gd
+trader.gd::GDScript::5104720973193316735::1765955936::0::1::::<>Control<><>0<>0<><>::
 trader.tscn::PackedScene::5597383549890077855::1765350887::0::1::::<><><>0<>0<><>::uid://cey1aj71pjiv4::::res://Scenes/trader.gd
-::res://Scripts/::1765852737
-crafting_recipe.gd::GDScript::2190321092003239439::1765783964::0::1::::Recipe<>Node<><>0<>0<><>::
+::res://Scripts/::1765955871
+crafting_recipe.gd::GDScript::2190321092003239439::1765955871::0::1::::Recipe<>Node<><>0<>0<><>::
 event_bus.gd::GDScript::3921321029247153728::1765850744::0::1::::Events<>Node<><>0<>0<><>::
 Globals.gd::GDScript::4612330595572637645::1765852737::0::1::::<>Node<><>0<>0<><>::
 inventory.gd::GDScript::3497013913799021728::1763363855::0::1::::<>Node<><>0<>0<><>::

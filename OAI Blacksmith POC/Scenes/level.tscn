@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://kciq7db1gx5j"]
+[gd_scene load_steps=6 format=3 uid="uid://kciq7db1gx5j"]
 
 [ext_resource type="Script" uid="uid://dwrto3oyofsky" path="res://Scenes/level.gd" id="1_6phgx"]
 [ext_resource type="Script" uid="uid://cbdtos8c4maaq" path="res://Scenes/mining_gridbox.gd" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://cl0odbhamok5l" path="res://Scenes/trader.tscn" id="4_81xng"]
+[ext_resource type="PackedScene" uid="uid://dsj0654ieq1op" path="res://Scenes/inventory_ui.tscn" id="5_0f350"]
 [ext_resource type="PackedScene" uid="uid://36kedkar0dt8" path="res://Scenes/smithy.tscn" id="5_wqkje"]
 
 [node name="Level" type="Control"]
@@ -174,6 +175,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 autowrap_mode = 3
+
+[node name="InventoryUI" parent="." instance=ExtResource("5_0f350")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="LevelVBox/MiningGridbox/MineCoal" to="LevelVBox/MiningGridbox" method="_on_mine_coal_pressed"]
 [connection signal="timeout" from="LevelVBox/MiningGridbox/MineCoal/MineCoalTimer" to="LevelVBox/MiningGridbox" method="_on_mine_coal_timer_timeout"]

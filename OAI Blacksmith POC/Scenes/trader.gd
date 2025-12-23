@@ -49,7 +49,6 @@ func _on_coal_sell_pressed() -> void:
 	if Globals.inventory.has("coal"):
 		Globals.update_item("coin", (coal_sell))
 		Globals.update_item("coal", -1)
-	print(Globals.inventory["coin"])
 
 
 func _on_iron_ore_sell_pressed():

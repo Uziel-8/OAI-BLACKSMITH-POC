@@ -36,5 +36,3 @@ func craft(key_name):
 					Globals.update_item(output, outputs[output])
 		else:
 			print("can't craft - missing ingredients")
-	
-	

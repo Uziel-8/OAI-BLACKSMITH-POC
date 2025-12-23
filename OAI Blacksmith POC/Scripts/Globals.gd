@@ -1,6 +1,12 @@
 extends Node
 
-var energy := 5
+var energy = 5:
+	set(value):
+		energy = value
+		EventBus.energy_changed.emit(value)
+
+
+
 var max_energy := 5
 
 var day = 1
@@ -11,6 +17,7 @@ var xp = 0:
 	set(value):
 		xp = value
 		EventBus.xp_changed.emit(value)
+
 
 var level = 0
 
