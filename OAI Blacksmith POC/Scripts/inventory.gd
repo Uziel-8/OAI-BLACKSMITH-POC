@@ -2,14 +2,14 @@ extends Node
 
 #var coins := 0
 
-var items: Array[Item]
+var items: Array[InventoryItem]
 
-const COAL : Item = preload("res://Resources/coal.tres") 
-const IRON_ORE : Item = preload("res://Resources/iron_ore.tres")
+const COAL : InventoryItem = preload("res://Resources/coal.tres") 
+const IRON_ORE : InventoryItem = preload("res://Resources/iron_ore.tres")
 func _ready() -> void:
 	pass
 
-func add_item(item: Item):
+func add_item(item: InventoryItem):
 	for existing_item in items:
 		if existing_item.item_name == item.item_name:
 			existing_item.stack_size += item.stack_size
@@ -20,7 +20,7 @@ func add_item(item: Item):
 	items.append(item.duplicate())
 	print("added new item:", item.item_name)
 
-func remove_item(item: Item):
+func remove_item(item: InventoryItem):
 	for existing_item in items:
 		if existing_item.item_name == item.item_name:
 			var amount_to_remove = min(existing_item.stack_size, item.stack_size)

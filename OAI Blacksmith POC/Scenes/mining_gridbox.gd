@@ -6,6 +6,7 @@ extends GridContainer
 @onready var mine_iron = $MineIronOre
 @onready var iron_ore_timer = $MineIronOre/MineIronOreTimer
 @onready var iron_ore_bar = $MineIronOre/MineIronOreBar
+@onready var coal = "res://Resources/coal.tres"
 
 func _process(_delta: float) -> void:
 	if coal_timer.is_stopped():
@@ -30,7 +31,11 @@ func _on_mine_coal_timer_timeout() -> void:
 func _on_mine_coal_pressed() -> void:
 	if Globals.energy > 0:
 		mine_coal.disabled = true
-		Globals.update_item("coal", 10)
+		#var new_coal = coal.new()
+		#new_coal.item_name = "Coal"
+		#new_coal.amount = 10
+		#new_coal.texture
+		Globals.update_item(coal)
 		coal_timer.start()
 		EventBus.mined.emit()
 	else:

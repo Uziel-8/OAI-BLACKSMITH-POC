@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://b7t80gnn56lod"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://b7t80gnn56lod"]
 
 [ext_resource type="Script" uid="uid://doaywwe0oiv6o" path="res://Scripts/item.gd" id="1_54jvl"]
+[ext_resource type="Texture2D" uid="uid://clew7dcdxikb" path="res://Graphics/Items/Coal.png" id="2_su1ve"]
 
 [resource]
 script = ExtResource("1_54jvl")
-item_name = "coal"
-stack_size = 1
+item_name = "Coal"
+texture = ExtResource("2_su1ve")
 metadata/_custom_type_script = "uid://doaywwe0oiv6o"
