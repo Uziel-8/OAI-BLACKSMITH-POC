@@ -1,7 +1,0 @@
-res://Scenes/inventory_ui.gd
-res://Scenes/inventory_ui.tscn
-res://Scripts/item.gd
-res://Scripts/Globals.gd
-res://Scripts/inventory.gd
-res://Resources/coal.tres
-res://Scenes/mining_gridbox.gd

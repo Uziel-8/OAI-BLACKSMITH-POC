@@ -2,16 +2,22 @@ extends Node
 
 class_name Recipe
 
+const COIN = preload("res://Resources/coin.tres")
+const COAL = preload("res://Resources/coal.tres")
+const IRON_ORE = preload("res://Resources/iron_ore.tres")
+const IRON_BAR = preload("res://Resources/iron_bar.tres")
+const IRON_SHORTBLADE = preload("res://Resources/iron_shortblade.tres")
+
 var recipes : Dictionary = {
 	"iron bar" = {
 		NAME = "Iron Bar",
-		INGREDIENTS = {"iron_ore" = 1, "coal" = 1},
-		OUTPUT = {"iron_bar" = 1}
+		INGREDIENTS = {Globals.IRON_ORE : 1, Globals.COAL : 1},
+		OUTPUT = {Globals.IRON_BAR : 1}
 		},
 	"iron shortblade" = {
 		NAME = "Iron Shortblade",
-		INGREDIENTS = {"iron_bar" = 2, "coal" = 1},
-		OUTPUT = {"iron_shortblade" = 1}
+		INGREDIENTS = {Globals.IRON_BAR : 2, Globals.COAL : 1},
+		OUTPUT = {Globals.IRON_SHORTBLADE : 1}
 	},
 	}
 
@@ -27,7 +33,6 @@ func craft(key_name):
 			for item in ingredients:
 				if Globals.inventory[item] >= ingredients[item]:
 					obtained_ingredients += 1
-					
 			
 			if obtained_ingredients == ingredients.size():
 				for item in ingredients:

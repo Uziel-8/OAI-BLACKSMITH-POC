@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dfet8ponh3ya2"]
+
+[ext_resource type="Script" uid="uid://1iatd2uo0ur3" path="res://Scripts/dialogue_data.gd" id="1_h4mjl"]
+
+[resource]
+script = ExtResource("1_h4mjl")
+name = "game start"
+dialogue_steps = Array[String](["Welcome, Smith! Our town is in need of your skills, and we are greatly looking forward to having you settled in.", "As we are setting up your forge, it may be worth your while to go down to the mines and gather some resources.", "Good luck, friend! We shall talk soon."])
+metadata/_custom_type_script = "uid://1iatd2uo0ur3"

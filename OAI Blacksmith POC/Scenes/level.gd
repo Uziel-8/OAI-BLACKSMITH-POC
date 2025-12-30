@@ -1,5 +1,7 @@
 extends Control
 
+
+
 @onready var energy_label = $GameStateLabel/EnergyLabel
 @onready var day_label = $GameStateLabel/DayLabel
 @onready var rent_label = $GameStateLabel/RentLabel
@@ -35,7 +37,7 @@ func _on_end_day_pressed() -> void:
 		_pay_rent()
 
 func _pay_rent():
-	Globals.update_item("coin", int(Globals.rent))
+	#Globals.update_item("coin", int(Globals.rent))
 	print(Globals.inventory) 
 
 func _on_xp_changed(total: int):
@@ -54,10 +56,10 @@ func _on_energy_changed(_value):
 
 func _on_inventory_changed():
 	var statement: String
-	var dict = Globals.inventory
+	var inventory = Globals.inventory
 	
-	for item in dict:
-		statement = statement + item + " : " + str(dict[item]) + "\n"
+	for item in inventory:
+		statement = statement + item.name + " : " + str(inventory[item]) + "\n"
 	inventory_label.text = statement
 
 func _input(_event: InputEvent) -> void:

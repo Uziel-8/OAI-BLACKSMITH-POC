@@ -38,7 +38,7 @@ offset_left = 12.0
 offset_top = 86.0
 offset_right = 99.0
 offset_bottom = 117.0
-text = "ADD COIN"
+text = "Print Inventory"
 
 [connection signal="pressed" from="Panel/CraftIronBarButton" to="." method="_on_craft_iron_bar_button_pressed"]
 [connection signal="pressed" from="Panel/CraftIronShortbladeButton" to="." method="_on_craft_iron_shortblade_button_pressed"]

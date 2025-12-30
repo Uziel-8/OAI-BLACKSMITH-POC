@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkrtbmxof1u4s"]
+
+[ext_resource type="Script" uid="uid://cp4ginu2v7hjq" path="res://test_ui.gd" id="1_a021g"]
+
+[node name="TestUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a021g")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 51.0
+expand_mode = 4
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 95.0
+offset_bottom = 50.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

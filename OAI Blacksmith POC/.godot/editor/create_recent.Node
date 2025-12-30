@@ -1,5 +1,10 @@
+Button
+Node
+RichTextLabel
+Label      - Matches the "text" keyword.
+VBoxContainer
+Panel
+TextureRect
+Label
 GridContainer
 ItemList
-Panel
-Button
-Label

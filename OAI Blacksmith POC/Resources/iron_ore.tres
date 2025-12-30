@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dh3nj43nqwct0"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dh3nj43nqwct0"]
 
 [ext_resource type="Script" uid="uid://doaywwe0oiv6o" path="res://Scripts/item.gd" id="1_2g6jo"]
+[ext_resource type="Texture2D" uid="uid://dd6lu3wr5girw" path="res://Graphics/Items/Iron Ore.png" id="2_jfoll"]
 
 [resource]
 script = ExtResource("1_2g6jo")
-item_name = "iron_ore"
-stack_size = 1
+name = "Iron Ore"
+texture = ExtResource("2_jfoll")
 metadata/_custom_type_script = "uid://doaywwe0oiv6o"

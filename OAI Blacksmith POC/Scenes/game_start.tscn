@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://clxcdsp56cswt"]
+
+[ext_resource type="Script" uid="uid://cxiwv2ibsjlwr" path="res://Scenes/game_start.gd" id="1_3jwdi"]
+[ext_resource type="PackedScene" uid="uid://ds47x4x8fsgso" path="res://Scenes/dialogue.tscn" id="1_ym6pf"]
+
+[node name="GameStart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jwdi")
+
+[node name="Dialogue" parent="." instance=ExtResource("1_ym6pf")]
+layout_mode = 1
+
+[connection signal="dialogue_complete" from="Dialogue" to="." method="_on_dialogue_dialogue_complete"]

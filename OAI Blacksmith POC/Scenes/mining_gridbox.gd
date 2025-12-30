@@ -6,7 +6,6 @@ extends GridContainer
 @onready var mine_iron = $MineIronOre
 @onready var iron_ore_timer = $MineIronOre/MineIronOreTimer
 @onready var iron_ore_bar = $MineIronOre/MineIronOreBar
-@onready var coal = "res://Resources/coal.tres"
 
 func _process(_delta: float) -> void:
 	if coal_timer.is_stopped():
@@ -31,23 +30,17 @@ func _on_mine_coal_timer_timeout() -> void:
 func _on_mine_coal_pressed() -> void:
 	if Globals.energy > 0:
 		mine_coal.disabled = true
-		#var new_coal = coal.new()
-		#new_coal.item_name = "Coal"
-		#new_coal.amount = 10
-		#new_coal.texture
-		Globals.update_item(coal)
+		Globals.update_item(Globals.COAL, 2)
 		coal_timer.start()
 		EventBus.mined.emit()
 	else:
 		print("Out of energy!")
 		return
 
-
 func _on_mine_iron_ore_pressed() -> void:
 	if Globals.energy > 0:
 		mine_iron.disabled = true
-		Globals.update_item("iron_ore", 10)
-		#i want to find a way to change this from emitting manually like this, to emitting automatically when the dict is updated - like coins
+		Globals.update_item(Globals.IRON_ORE, 10)
 		iron_ore_timer.start()
 		EventBus.mined.emit()
 	else:

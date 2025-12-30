@@ -17,14 +17,14 @@ func _ready() -> void:
 	iron_ore_buy_button.text = str("Buy Iron Ore: $", iron_ore_buy)
 	iron_ore_sell_button.text = str("Sell Iron Ore: $", iron_ore_sell)
 	EventBus.day_changed.connect(_on_day_changed)
-	#EventBus.inventory_changed.connect(_on_inventory_changed)
+
 
 #CHANGE THIS TO NOT BE PROCESS
 func _process(_delta: float) -> void:
-	if Globals.inventory.has("coin"):
-		if Globals.inventory["coin"] >= int(coal_buy):
+	if Globals.inventory.has(Globals.COIN):
+		if Globals.inventory[Globals.COIN] >= int(coal_buy):
 			coal_buy_button.disabled = false
-		if Globals.inventory["coin"] >= iron_ore_buy:
+		if Globals.inventory[Globals.COIN] >= iron_ore_buy:
 			iron_ore_buy_button.disabled = false
 
 func _on_day_changed():
@@ -32,26 +32,27 @@ func _on_day_changed():
 		self.visible = true
 
 func _on_coal_buy_pressed() -> void:
-	if Globals.inventory.has("coin") and Globals.inventory["coin"] >= coal_buy:
-		Globals.update_item("coin", -(coal_buy))
-		Globals.update_item("coal", 1)
+	if Globals.inventory.has(Globals.COIN) and Globals.inventory[Globals.COIN] >= coal_buy:
+		Globals.update_item(Globals.COIN, -(coal_buy))
+		Globals.update_item(Globals.COAL, 1)
 	else:
 		return
+	pass
 
 func _on_iron_ore_buy_pressed() -> void:
-	if Globals.inventory.has("coin") and Globals.inventory["coin"] >= iron_ore_buy:
-		Globals.update_item("coin", -(iron_ore_buy))
-		Globals.update_item("iron_ore", 1)
+	if Globals.inventory.has(Globals.COIN) and Globals.inventory[Globals.COIN] >= iron_ore_buy:
+		Globals.update_item(Globals.COIN, -(iron_ore_buy))
+		Globals.update_item(Globals.IRON_ORE, 1)
 	else:
 		return
 
 func _on_coal_sell_pressed() -> void:
-	if Globals.inventory.has("coal"):
-		Globals.update_item("coin", (coal_sell))
-		Globals.update_item("coal", -1)
+	if Globals.inventory.has(Globals.COAL):
+		Globals.update_item(Globals.COIN, (coal_sell))
+		Globals.update_item(Globals.COAL, -1)
 
 
 func _on_iron_ore_sell_pressed():
-	if Globals.inventory.has("iron_ore"):
-		Globals.update_item("coin", (iron_ore_sell))
-		Globals.update_item("iron_ore", -1)
+	if Globals.inventory.has(Globals.IRON_ORE):
+		Globals.update_item(Globals.COIN, (iron_ore_sell))
+		Globals.update_item(Globals.IRON_ORE, -1)

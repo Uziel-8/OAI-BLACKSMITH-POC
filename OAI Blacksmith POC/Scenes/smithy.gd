@@ -12,5 +12,5 @@ func _on_craft_iron_shortblade_button_pressed() -> void:
 
 
 func _on_button_pressed() -> void:
-	Globals.update_item("coin", 5)
+	#Globals.update_item("coin", 5)
 	print(Globals.inventory)
