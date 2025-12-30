@@ -1,12 +1,12 @@
 extends Node
 
 class_name Recipe
-
-const COIN = preload("res://Resources/coin.tres")
-const COAL = preload("res://Resources/coal.tres")
-const IRON_ORE = preload("res://Resources/iron_ore.tres")
-const IRON_BAR = preload("res://Resources/iron_bar.tres")
-const IRON_SHORTBLADE = preload("res://Resources/iron_shortblade.tres")
+#
+#const COIN = preload("res://Resources/coin.tres")
+#const COAL = preload("res://Resources/coal.tres")
+#const IRON_ORE = preload("res://Resources/iron_ore.tres")
+#const IRON_BAR = preload("res://Resources/iron_bar.tres")
+#const IRON_SHORTBLADE = preload("res://Resources/iron_shortblade.tres")
 
 var recipes : Dictionary = {
 	"iron bar" = {
@@ -19,7 +19,19 @@ var recipes : Dictionary = {
 		INGREDIENTS = {Globals.IRON_BAR : 2, Globals.COAL : 1},
 		OUTPUT = {Globals.IRON_SHORTBLADE : 1}
 	},
+	"wooden hilt" = {
+		NAME = "Wooden Hilt",
+		INGREDIENTS = {Globals.WOOD : 3, Globals.IRON_BAR : 1},
+		OUTPUT = {Globals.WOODEN_HILT : 1}
+	},
 	}
+
+func _ready() -> void:
+	EventBus.inventory_changed.connect(_on_inventory_changed)
+
+func _on_inventory_changed():
+	pass
+
 
 func craft(key_name):
 	var recipe: Dictionary = recipes[key_name]

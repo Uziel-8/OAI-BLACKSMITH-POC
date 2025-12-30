@@ -1,3 +1,3 @@
-DialogueData
 InventoryItem
+DialogueData
 Recipe

@@ -1,0 +1,7 @@
+res://Scenes/main.tscn
+res://Scenes/main.gd
+res://Scenes/level.tscn
+res://Scripts/crafting_recipe.gd
+res://Scripts/Globals.gd
+res://Resources/wood.tres
+res://Resources/wooden_hilt.tres

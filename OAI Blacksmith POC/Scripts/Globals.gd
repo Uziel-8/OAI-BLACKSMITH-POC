@@ -4,8 +4,10 @@ extends Node
 const COIN = preload("res://Resources/coin.tres")
 const COAL = preload("res://Resources/coal.tres")
 const IRON_ORE = preload("res://Resources/iron_ore.tres")
+const WOOD = preload("res://Resources/wood.tres")
 const IRON_BAR = preload("res://Resources/iron_bar.tres")
 const IRON_SHORTBLADE = preload("res://Resources/iron_shortblade.tres")
+const WOODEN_HILT = preload("res://Resources/wooden_hilt.tres")
 ##
 
 var energy = 10:

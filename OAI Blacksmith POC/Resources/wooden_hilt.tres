@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dycr2fernn74t"]
+
+[ext_resource type="Script" uid="uid://doaywwe0oiv6o" path="res://Scripts/item.gd" id="1_es7f8"]
+[ext_resource type="Texture2D" uid="uid://cdxlldgmxdu3u" path="res://Graphics/Items/wooden_hilt.png" id="2_kb3jy"]
+
+[resource]
+script = ExtResource("1_es7f8")
+name = "Wooden Hilt"
+texture = ExtResource("2_kb3jy")
+metadata/_custom_type_script = "uid://doaywwe0oiv6o"
