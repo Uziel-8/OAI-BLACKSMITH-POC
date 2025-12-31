@@ -24,14 +24,12 @@ offset_right = 310.0
 grow_vertical = 2
 
 [node name="CraftIronBarButton" type="Button" parent="Panel"]
-visible = false
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "CRAFT IRON BAR"
 
 [node name="CraftIronShortbladeButton" type="Button" parent="Panel"]
-visible = false
 layout_mode = 0
 offset_left = 7.0
 offset_top = 39.0
@@ -40,7 +38,6 @@ offset_bottom = 47.0
 text = "CRAFT IRON SHORTBLADE"
 
 [node name="Button" type="Button" parent="Panel"]
-visible = false
 layout_mode = 0
 offset_left = 12.0
 offset_top = 86.0

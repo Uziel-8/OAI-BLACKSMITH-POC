@@ -17,19 +17,23 @@ func _ready() -> void:
 	iron_ore_buy_button.text = str("Buy Iron Ore: $", iron_ore_buy)
 	iron_ore_sell_button.text = str("Sell Iron Ore: $", iron_ore_sell)
 	EventBus.day_changed.connect(_on_day_changed)
+	EventBus.inventory_changed.connect(_on_inventory_changed)
 
 
 #CHANGE THIS TO NOT BE PROCESS
 func _process(_delta: float) -> void:
-	if Globals.inventory.has(Globals.COIN):
-		if Globals.inventory[Globals.COIN] >= int(coal_buy):
-			coal_buy_button.disabled = false
-		if Globals.inventory[Globals.COIN] >= iron_ore_buy:
-			iron_ore_buy_button.disabled = false
+	pass
 
 func _on_day_changed():
 	if Globals.day > 2:
 		self.visible = true
+
+func _on_inventory_changed():
+	if Globals.inventory.has(Globals.COIN):
+		if Globals.inventory[Globals.COIN] >= int(coal_buy):
+			coal_buy_button.disabled = false
+		if Globals.inventory[Globals.COIN] >= int(iron_ore_buy):
+			iron_ore_buy_button.disabled = false
 
 func _on_coal_buy_pressed() -> void:
 	if Globals.inventory.has(Globals.COIN) and Globals.inventory[Globals.COIN] >= coal_buy:

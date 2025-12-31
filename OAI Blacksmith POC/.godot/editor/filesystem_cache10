@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1767071370
+::res://::1767154609
 icon.svg::CompressedTexture2D::674837351265639347::1766562457::1766563535::1::::<><><>0<>0<>bad4ed1d75c3a1910c1c4ae6d8a592d4<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 test_ui.gd::GDScript::5885920280087985166::1767058963::0::1::::<>Control<><>0<>0<><>::
 ::res://Graphics/::1766562457
-::res://Graphics/Items/::1767074102
+::res://Graphics/Items/::1767074103
 Coal.png::CompressedTexture2D::163369683485107165::1766562457::1766563535::1::::<><><>0<>0<>1faf418a284cdae64922ff9e1ad4fd79<>res://.godot/imported/Coal.png-f7eace967ec2ac941bc9f8ffe1060eec.ctex::
 Coin.png::CompressedTexture2D::4237586113325898144::1767059756::1767059763::1::::<><><>0<>0<>1da61e790bc264ccdbc7042db5f48f7a<>res://.godot/imported/Coin.png-7df52ed73d0974dce1a47eacf5ea1728.ctex::
 Iron Bar.png::CompressedTexture2D::7305334382848571748::1766562457::1766563536::1::::<><><>0<>0<>82792b26fb4a1b39d4f75ff083291ee6<>res://.godot/imported/Iron Bar.png-db53019304ea9e37179df49e1c32acc5.ctex::
@@ -11,17 +11,21 @@ Iron Ore.png::CompressedTexture2D::7434529400620021544::1766562457::1766563536::
 iron_shortblade.png::CompressedTexture2D::5298066356247970361::1767069645::1767069646::1::::<><><>0<>0<>d1f5b41750d0727513a7d78331a27630<>res://.godot/imported/iron_shortblade.png-35c97b943e313947eb077164552f3640.ctex::
 wood.png::CompressedTexture2D::5835280099781261735::1767073915::1767073916::1::::<><><>0<>0<>237b8d21e0cda7a83e896f0d6ec3cd51<>res://.godot/imported/wood.png-bda1f6d2d2a5b6f8eee5dc9f8dd0ece4.ctex::
 wooden_hilt.png::CompressedTexture2D::5031576284712038820::1767074102::1767074103::1::::<><><>0<>0<>0f62945501049b2ca1ec8cb7059d3181<>res://.godot/imported/wooden_hilt.png-1b756db86c3cfe6c3ddf54b923c5afaa.ctex::
-::res://Resources/::1767073086
+::res://Resources/::1767140511
 coal.tres::Resource/InventoryItem::4673735498900729283::1766567761::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://clew7dcdxikb::::res://Graphics/Items/Coal.png
 coin.tres::Resource/InventoryItem::1096745434548775100::1767059773::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://b1myoolqftyp1::::res://Graphics/Items/Coin.png
 iron_bar.tres::Resource/InventoryItem::376289224416312454::1767059659::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://dcc014gxy81xg::::res://Graphics/Items/Iron Bar.png
 iron_ore.tres::Resource/InventoryItem::7709193493754899063::1767059659::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://dd6lu3wr5girw::::res://Graphics/Items/Iron Ore.png
 iron_shortblade.tres::Resource/InventoryItem::5335594624859902517::1767069690::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://chqom46sp1ahl::::res://Graphics/Items/iron_shortblade.png
-wood.tres::Resource/InventoryItem::3592309759990347628::1767073086::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd
-wooden_hilt.tres::Resource/InventoryItem::8849003728798953925::1767073021::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd
+wood.tres::Resource/InventoryItem::3592309759990347628::1767074120::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://cpewhftjy3kux::::res://Graphics/Items/wood.png
+wooden_hilt.tres::Resource/InventoryItem::8849003728798953925::1767074131::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://cdxlldgmxdu3u::::res://Graphics/Items/wooden_hilt.png
 ::res://Resources/Dialogues/::1767065411
 game_start_dialogue.tres::Resource/DialogueData::7519677144425785707::1767065411::0::1::::<><><>0<>0<><>::uid://1iatd2uo0ur3::::res://Scripts/dialogue_data.gd
-::res://Scenes/::1767073254
+::res://Resources/Recipes/::1767145081
+iron_bar_recipe.tres::Resource/CraftData::7687421123595157398::1767140714::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://bft7vsnkdin61::::res://Scripts/craft_recipe_data.gd<>uid://dh3nj43nqwct0::::res://Resources/iron_ore.tres
+iron_shortblade.tres::Resource/CraftData::7163817256787054892::1767145081::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://fmjotnyipwo1::::res://Resources/iron_bar.tres<>uid://bft7vsnkdin61::::res://Scripts/craft_recipe_data.gd
+wooden_hilt.tres::Resource/CraftData::6874221977271138696::1767145055::0::1::::<><><>0<>0<><>::uid://doaywwe0oiv6o::::res://Scripts/item.gd<>uid://brge21luimoau::::res://Resources/wood.tres<>uid://bft7vsnkdin61::::res://Scripts/craft_recipe_data.gd
+::res://Scenes/::1767145131
 dialogue.gd::GDScript::2200868078008956422::1767069004::0::1::::<>Control<><>0<>0<><>::
 dialogue.tscn::PackedScene::8484513768674380490::1767065734::0::1::::<><><>0<>0<><>::uid://6md8f5w7vunu::::res://Scenes/dialogue.gd<>uid://dfet8ponh3ya2::::res://Resources/Dialogues/game_start_dialogue.tres
 game_start.gd::GDScript::6405074499165036081::1767069070::0::1::::<>Control<><>0<>0<><>::
@@ -30,20 +34,21 @@ inventory_hbox.gd::GDScript::7431227408216510535::1766562457::0::1::::<>HBoxCont
 inventory_ui.gd::GDScript::8527809369228858594::1766735055::0::1::::<>Control<><>0<>0<><>::
 inventory_ui.tscn::PackedScene::8442815541649957971::1766568509::0::1::::<><><>0<>0<><>::uid://dtq61lglonhp7::::res://Scenes/inventory_ui.gd
 level.gd::GDScript::8739691150302705596::1767057874::0::1::::<>Control<><>0<>0<><>::
-level.tscn::PackedScene::706533185995114897::1767073254::0::1::::<><><>0<>0<><>::uid://dwrto3oyofsky::::res://Scenes/level.gd<>uid://cbdtos8c4maaq::::res://Scenes/mining_gridbox.gd<>uid://cl0odbhamok5l::::res://Scenes/trader.tscn<>uid://dsj0654ieq1op::::res://Scenes/inventory_ui.tscn<>uid://36kedkar0dt8::::res://Scenes/smithy.tscn
+level.tscn::PackedScene::706533185995114897::1767140714::0::1::::<><><>0<>0<><>::uid://dwrto3oyofsky::::res://Scenes/level.gd<>uid://cbdtos8c4maaq::::res://Scenes/mining_gridbox.gd<>uid://cl0odbhamok5l::::res://Scenes/trader.tscn<>uid://dsj0654ieq1op::::res://Scenes/inventory_ui.tscn<>uid://36kedkar0dt8::::res://Scenes/smithy.tscn
 main.gd::GDScript::8266258196066535756::1767072795::0::1::::<>Node<><>0<>0<><>::
 main.tscn::PackedScene::8615090399140829382::1767072876::0::1::::<><><>0<>0<><>::uid://dp1icg44sdt4o::::res://Scenes/main.gd<>uid://clxcdsp56cswt::::res://Scenes/game_start.tscn
 mining_gridbox.gd::GDScript::4850402964792589760::1767062667::0::1::::<>GridContainer<><>0<>0<><>::
-smithy.gd::GDScript::6235107692578441960::1766566134::0::1::::<>Control<><>0<>0<><>::
-smithy.tscn::PackedScene::2029897818385843083::1767063056::0::1::::<><><>0<>0<><>::uid://cu3lkvr1s1lrk::::res://Scenes/smithy.gd
+smithy.gd::GDScript::6235107692578441960::1767144886::0::1::::<>Control<><>0<>0<><>::
+smithy.tscn::PackedScene::2029897818385843083::1767145131::0::1::::<><><>0<>0<><>::uid://cu3lkvr1s1lrk::::res://Scenes/smithy.gd<>uid://bft7vsnkdin61::::res://Scripts/craft_recipe_data.gd<>uid://dhr3x5niuehry::::res://Resources/Recipes/iron_bar_recipe.tres<>uid://dacha2iq00ria::::res://Resources/Recipes/iron_shortblade.tres<>uid://c466ow70yh8bk::::res://Resources/Recipes/wooden_hilt.tres
 test_ui.tscn::PackedScene::7897400984389637852::1767061239::0::1::::<><><>0<>0<><>::uid://cp4ginu2v7hjq::::res://test_ui.gd
-trader.gd::GDScript::5104720973193316735::1767062846::0::1::::<>Control<><>0<>0<><>::
+trader.gd::GDScript::5104720973193316735::1767138790::0::1::::<>Control<><>0<>0<><>::
 trader.tscn::PackedScene::5597383549890077855::1766566852::0::1::::<><><>0<>0<><>::uid://cey1aj71pjiv4::::res://Scenes/trader.gd
-::res://Scripts/::1767073254
-crafting_recipe.gd::GDScript::2190321092003239439::1767073254::0::1::::Recipe<>Node<><>0<>0<><>::
+::res://Scripts/::1767143449
+crafting_recipe.gd::GDScript::2190321092003239439::1767143449::0::1::::Recipe<>Node<><>0<>0<><>::
+craft_recipe_data.gd::GDScript::2778569490612382172::1767140614::0::1::::CraftData<>Resource<><>0<>0<><>::
 dialogue_data.gd::GDScript::1841459086913706390::1767065194::0::1::::DialogueData<>Resource<><>0<>0<><>::
 event_bus.gd::GDScript::3921321029247153728::1767068689::0::1::::Events<>Node<><>0<>0<><>::
 Globals.gd::GDScript::4612330595572637645::1767073103::0::1::::<>Node<><>0<>0<><>::
-inventory.gd::GDScript::3497013913799021728::1766562457::0::1::::<>Node<><>0<>0<><>::
+inventory.gd::GDScript::3497013913799021728::1767142513::0::1::::<>RefCounted<><>0<>0<><>::
 item.gd::GDScript::8143403520151914304::1767061157::0::1::::InventoryItem<>Resource<><>0<>0<><>::
 item_list.gd::GDScript::1950521575545393549::1767062415::0::1::::<>Node<><>0<>0<><>::

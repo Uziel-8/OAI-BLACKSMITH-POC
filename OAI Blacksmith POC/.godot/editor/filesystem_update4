@@ -1,7 +1,8 @@
-res://Scenes/main.tscn
-res://Scenes/main.gd
-res://Scenes/level.tscn
+res://craft_button.gd
+res://Scenes/smithy.gd
+res://Scenes/craft_button.tscn
+res://Scenes/smithy.tscn
 res://Scripts/crafting_recipe.gd
-res://Scripts/Globals.gd
-res://Resources/wood.tres
-res://Resources/wooden_hilt.tres
+res://Resources/Recipes/iron_bar_recipe.tres
+res://Resources/Recipes/iron_shortblade.tres
+res://Resources/Recipes/wooden_hilt.tres

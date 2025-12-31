@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CraftData" load_steps=6 format=3 uid="uid://dhr3x5niuehry"]
+
+[ext_resource type="Script" uid="uid://doaywwe0oiv6o" path="res://Scripts/item.gd" id="1_0p323"]
+[ext_resource type="Script" uid="uid://bft7vsnkdin61" path="res://Scripts/craft_recipe_data.gd" id="1_fpovo"]
+[ext_resource type="Resource" uid="uid://b7t80gnn56lod" path="res://Resources/coal.tres" id="2_j7ujv"]
+[ext_resource type="Resource" uid="uid://dh3nj43nqwct0" path="res://Resources/iron_ore.tres" id="3_35hj0"]
+[ext_resource type="Resource" uid="uid://fmjotnyipwo1" path="res://Resources/iron_bar.tres" id="4_ct8o6"]
+
+[resource]
+script = ExtResource("1_fpovo")
+name = "Iron Bar"
+input = Dictionary[ExtResource("1_0p323"), int]({
+ExtResource("2_j7ujv"): 1,
+ExtResource("3_35hj0"): 1
+})
+output = Dictionary[ExtResource("1_0p323"), int]({
+ExtResource("4_ct8o6"): 1
+})
+metadata/_custom_type_script = "uid://bft7vsnkdin61"

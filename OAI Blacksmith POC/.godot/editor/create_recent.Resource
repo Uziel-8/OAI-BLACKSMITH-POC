@@ -1,3 +1,4 @@
+CraftData
 InventoryItem
 DialogueData
 Recipe
