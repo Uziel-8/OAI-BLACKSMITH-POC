@@ -5,19 +5,42 @@ extends Control
 @onready var smith_container = $Panel/SmithButtonContainer
 
 @export var button_data : CraftData
-@export var all_recipes: Array[CraftData] = []
+@export var all_recipes: Array[CraftData] = [] ##these recipes need to be loaded in to the inspector
 
 var recipe_buttons : Dictionary = {}
-
+var can_craft : bool = false
 func _ready() -> void:
 	EventBus.inventory_changed.connect(_on_inventory_changed)
 
-
 func _on_inventory_changed():
 	for recipe in all_recipes:
-		var can_craft = CraftingRecipe.can_craft
+		var ingredients: Dictionary = recipe.input
+		if Globals.inventory.has_all(ingredients.keys()):
+			var ingredients_requirements_met: int = 0
+			for item in ingredients:
+				print("top of for item in ingredients: ", recipe.name, " ", item.name, " ", ingredients[item])
+				if Globals.inventory[item] >= ingredients[item]:
+					print("fuck: " , item.name, " ", Globals.inventory[item], " ", recipe.name, " ", ingredients[item])
+					ingredients_requirements_met += 1
+			
+			print("new print : ", ingredients_requirements_met, " ", ingredients.size())
+			
+			if ingredients_requirements_met == ingredients.size():
+				print("yes", recipe.name)
+				can_craft = true
+			else:
+				print("not enough ingredients to craft: ", recipe.name)
+				can_craft = false
+		else:
+			print("no :", recipe.name)
+			can_craft = false
+		
+	
+	
 		if can_craft and not recipe_buttons.has(recipe):
 			print("can craft: ", recipe.name)
+			if Globals.inventory.has(Globals.IRON_BAR):
+				print("number of BARS: ", Globals.inventory[Globals.IRON_BAR])
 			add_button(recipe)
 		elif not can_craft and recipe_buttons.has(recipe):
 			remove_button(recipe)
@@ -31,15 +54,3 @@ func add_button(recipe):
 func remove_button(recipe):
 	recipe_buttons[recipe].queue_free()
 	recipe_buttons.erase(recipe)
-#
-#func _on_craft_iron_bar_button_pressed() -> void:
-	#CraftingRecipe.craft("iron bar")
-#
-#
-#func _on_craft_iron_shortblade_button_pressed() -> void:
-	#CraftingRecipe.craft("iron shortblade")
-#
-#
-#func _on_button_pressed() -> void:
-	##Globals.update_item("coin", 5)
-	#print(Globals.inventory)

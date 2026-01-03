@@ -32,24 +32,6 @@ func craft(recipe):
 		else:
 			print("can't craft - missing ingredients")
 
-func can_craft(recipe):
-	if recipe != null:
-		var ingredients: Dictionary = recipe.input
-		var outputs: Dictionary = recipe.output
-		print(recipe.name, recipe.input, recipe.output)
-		if Globals.inventory.has_all(ingredients.keys()):
-			var obtained_ingredients: int = 0
-			for item in ingredients:
-				if Globals.inventory[item] >= ingredients[item]:
-					obtained_ingredients += 1
-			
-			if obtained_ingredients == ingredients.size():
-				print("yes")
-				return true
-		else:
-			print("no")
-			return false
-			print("can't craft - missing ingredients")
 
 
 
