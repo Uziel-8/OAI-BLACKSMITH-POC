@@ -76,7 +76,7 @@ func _toggle_inventory():
 
 #TO DO
 #make sprites for inv. items - less text everywhere.
-
+##LEVELVBOX may be unneccessary here?
 
 #trader could have multiple different traders - rename to marketplace or something?
 #might need customers in there too

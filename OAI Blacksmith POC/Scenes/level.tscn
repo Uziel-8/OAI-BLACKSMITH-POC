@@ -135,10 +135,11 @@ offset_right = -423.0
 
 [node name="Smithy" parent="." instance=ExtResource("5_wqkje")]
 layout_mode = 1
-offset_left = 540.0
-offset_top = 94.0
-offset_right = 540.0
-offset_bottom = -430.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 
 [node name="ExpBar" type="ProgressBar" parent="."]
 layout_mode = 1
@@ -162,8 +163,8 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -152.0
-offset_top = -198.0
-offset_bottom = 20.0
+offset_top = -109.0
+offset_bottom = 109.0
 grow_horizontal = 0
 grow_vertical = 2
 

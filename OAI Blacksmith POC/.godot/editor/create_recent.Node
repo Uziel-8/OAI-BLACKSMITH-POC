@@ -1,3 +1,6 @@
+TextureButton
+Label
+Panel
 Button
 Node
 VBoxContainer
@@ -5,7 +8,5 @@ ColorRect
 TextureRect
 RichTextLabel
 Label      - Matches the "text" keyword.
-Panel
-Label
 GridContainer
 ItemList

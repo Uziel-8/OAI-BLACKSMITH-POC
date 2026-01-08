@@ -1,4 +1,5 @@
 extends Control
+@onready var button: Button = $Panel/Button
 
 var dict: Dictionary = {
 	"coal": 15,
@@ -6,14 +7,5 @@ var dict: Dictionary = {
 	"iron_bar": 3
 }
 
-
-
-func _on_button_pressed() -> void:
-	print(dict["coal"])
-	
-	#_update_dictionary(coal, 10)
-
-#func _update_dictionary(resource_item, value):
-	#dict[resource_item.name] = value
-
-##WATCH A VIDEO ON RESOURCES IN DICTIONARIES
+func _on_button_pressed():
+	print("fuck")

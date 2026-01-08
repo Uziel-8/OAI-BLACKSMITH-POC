@@ -9,6 +9,7 @@ script = ExtResource("1_jjgbg")
 [node name="GameStart" parent="." instance=ExtResource("2_bo1nx")]
 
 [node name="Fade" type="ColorRect" parent="."]
+z_index = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
