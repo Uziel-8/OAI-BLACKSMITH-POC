@@ -1,3 +1,4 @@
-res://Scenes/test_ui.tscn
+res://Scenes/level.tscn
 res://Themes/test_theme.tres
-res://test_ui.gd
+res://Scenes/trader.gd
+res://Scenes/main.gd

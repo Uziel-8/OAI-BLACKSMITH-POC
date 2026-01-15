@@ -20,9 +20,6 @@ func _ready() -> void:
 	EventBus.inventory_changed.connect(_on_inventory_changed)
 
 
-#CHANGE THIS TO NOT BE PROCESS
-func _process(_delta: float) -> void:
-	pass
 
 func _on_day_changed():
 	if Globals.day > 2:

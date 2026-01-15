@@ -17,7 +17,6 @@ func _on_transition_scene(scene):
 	var new_scene = scene.instantiate()
 	add_child(new_scene)
 	fade(0.0, 1.5)
-##BIT JANKY, NEED TO COME BACK AND FIGURE OUT WHAT IS GOING WRONG WITH THE FADE IN
 
 
 func fade(target_alpha: float, duration: float = 1.0):
