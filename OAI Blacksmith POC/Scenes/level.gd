@@ -1,6 +1,10 @@
 extends Control
 
+@onready var TRADER_SCENE : PackedScene = preload("res://Scenes/trader.tscn")
+@onready var SMITHY_SCENE : PackedScene = preload("res://Scenes/smithy.tscn")
 
+@onready var trader_transition: Button = $SceneTransitionPanel/HBoxContainer/TraderTransition
+@onready var smithy_transition: Button = $SceneTransitionPanel/HBoxContainer/SmithyTransition
 
 @onready var energy_label = $GameStateLabel/EnergyLabel
 @onready var day_label = $GameStateLabel/DayLabel
@@ -35,6 +39,15 @@ func _on_end_day_pressed() -> void:
 	EventBus.day_changed.emit()
 	if Globals.day % 7 == 0:
 		_pay_rent()
+	##enable scene transition buttons goes here
+
+func _on_trader_transition_pressed() -> void:
+	EventBus.scene_transition.emit(TRADER_SCENE)
+
+
+func _on_smithy_transition_pressed() -> void:
+	EventBus.scene_transition.emit(SMITHY_SCENE)
+
 
 func _pay_rent():
 	#Globals.update_item("coin", int(Globals.rent))
@@ -72,7 +85,6 @@ func _toggle_inventory():
 			inv_ui.set_visible(false)
 		else:
 			inv_ui.set_visible(true)
-
 
 #TO DO
 #make sprites for inv. items - less text everywhere.

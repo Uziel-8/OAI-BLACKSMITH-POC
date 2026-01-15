@@ -1,12 +1,14 @@
 extends Control
 
+const LEVEL_SCENE : PackedScene = preload("res://Scenes/level.tscn")
+const SMITHY_SCENE : PackedScene = preload("res://Scenes/smithy.tscn")
+
 var coal_buy := 2
 var coal_sell := 1
 
 var iron_ore_buy := 4
 var iron_ore_sell := 2
 # coal_buy is the player buying coal from the trader, coal_sell is the player selling coal
-
 @onready var coal_buy_button = $Panel/VSplitContainer/VBoxContainer/HSplitContainer/CoalBuy
 @onready var coal_sell_button = $Panel/VSplitContainer/VBoxContainer/HSplitContainer/CoalSell
 
@@ -20,10 +22,8 @@ func _ready() -> void:
 	EventBus.inventory_changed.connect(_on_inventory_changed)
 
 
-
 func _on_day_changed():
-	if Globals.day > 2:
-		self.visible = true
+	pass
 
 func _on_inventory_changed():
 	if Globals.inventory.has(Globals.COIN):
@@ -57,3 +57,15 @@ func _on_iron_ore_sell_pressed():
 	if Globals.inventory.has(Globals.IRON_ORE):
 		Globals.update_item(Globals.COIN, (iron_ore_sell))
 		Globals.update_item(Globals.IRON_ORE, -1)
+
+
+func _on_level_transition_pressed() -> void:
+	#if scene == null:
+		#push_error("Scene transition called with null PackedScene")
+		#return
+	#
+	EventBus.scene_transition.emit(LEVEL_SCENE)
+
+
+func _on_smithy_transition_pressed() -> void:
+	EventBus.scene_transition.emit(SMITHY_SCENE)

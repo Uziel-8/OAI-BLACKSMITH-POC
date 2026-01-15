@@ -1,9 +1,10 @@
+Button
+VBoxContainer
+Panel
+HBoxContainer
 TextureButton
 Label
-Panel
-Button
 Node
-VBoxContainer
 ColorRect
 TextureRect
 RichTextLabel

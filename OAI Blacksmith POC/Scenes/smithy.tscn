@@ -56,6 +56,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="SceneTransitionPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SceneTransitionPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LevelTransition" type="Button" parent="SceneTransitionPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Level"
+
+[node name="TraderTransition" type="Button" parent="SceneTransitionPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Trader"
+
 [connection signal="pressed" from="Panel/CraftIronBarButton" to="." method="_on_craft_iron_bar_button_pressed"]
 [connection signal="pressed" from="Panel/CraftIronShortbladeButton" to="." method="_on_craft_iron_shortblade_button_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SceneTransitionPanel/VBoxContainer/LevelTransition" to="." method="_on_level_transition_pressed"]
+[connection signal="pressed" from="SceneTransitionPanel/VBoxContainer/TraderTransition" to="." method="_on_trader_transition_pressed"]

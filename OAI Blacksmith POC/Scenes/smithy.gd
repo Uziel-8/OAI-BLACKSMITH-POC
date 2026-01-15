@@ -1,6 +1,8 @@
 extends Control
 
 @onready var craft_button = preload("res://Scenes/craft_button.tscn")
+const LEVEL_SCENE : PackedScene = preload("res://Scenes/level.tscn")
+const TRADER_SCENE : PackedScene = preload("res://Scenes/trader.tscn")
 
 @onready var smith_container = $Panel/SmithButtonContainer
 
@@ -54,3 +56,11 @@ func add_button(recipe):
 func remove_button(recipe):
 	recipe_buttons[recipe].queue_free()
 	recipe_buttons.erase(recipe)
+
+
+func _on_level_transition_pressed() -> void:
+	EventBus.scene_transition.emit(LEVEL_SCENE)
+
+
+func _on_trader_transition_pressed() -> void:
+	EventBus.scene_transition.emit(TRADER_SCENE)

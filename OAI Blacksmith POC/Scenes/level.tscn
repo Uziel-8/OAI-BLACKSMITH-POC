@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://kciq7db1gx5j"]
+[gd_scene load_steps=4 format=3 uid="uid://kciq7db1gx5j"]
 
 [ext_resource type="Script" uid="uid://dwrto3oyofsky" path="res://Scenes/level.gd" id="1_6phgx"]
 [ext_resource type="Script" uid="uid://cbdtos8c4maaq" path="res://Scenes/mining_gridbox.gd" id="1_tumq0"]
-[ext_resource type="PackedScene" uid="uid://cl0odbhamok5l" path="res://Scenes/trader.tscn" id="4_81xng"]
 [ext_resource type="PackedScene" uid="uid://dsj0654ieq1op" path="res://Scenes/inventory_ui.tscn" id="5_0f350"]
-[ext_resource type="PackedScene" uid="uid://36kedkar0dt8" path="res://Scenes/smithy.tscn" id="5_wqkje"]
 
 [node name="Level" type="Control"]
 layout_mode = 3
@@ -17,8 +15,8 @@ script = ExtResource("1_6phgx")
 
 [node name="LevelVBox" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 237.0
-offset_bottom = 223.0
+offset_right = 171.0
+offset_bottom = 86.0
 
 [node name="MiningGridbox" type="GridContainer" parent="LevelVBox"]
 layout_mode = 2
@@ -85,8 +83,8 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -121.0
-offset_bottom = 108.0
+offset_left = -123.0
+offset_bottom = 65.0
 grow_horizontal = 0
 
 [node name="EnergyLabel" type="Label" parent="GameStateLabel"]
@@ -121,25 +119,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -229.0
-offset_top = -103.0
+offset_left = -166.0
+offset_top = -65.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "End Day"
-
-[node name="Trader" parent="." instance=ExtResource("4_81xng")]
-visible = false
-layout_mode = 1
-offset_left = 420.0
-offset_right = -423.0
-
-[node name="Smithy" parent="." instance=ExtResource("5_wqkje")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
 
 [node name="ExpBar" type="ProgressBar" parent="."]
 layout_mode = 1
@@ -181,9 +165,39 @@ autowrap_mode = 3
 visible = false
 layout_mode = 1
 
+[node name="SceneTransitionPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.5
+offset_right = 62.5
+offset_bottom = 54.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SceneTransitionPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TraderTransition" type="Button" parent="SceneTransitionPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Trader"
+
+[node name="SmithyTransition" type="Button" parent="SceneTransitionPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Smithy"
+
 [connection signal="pressed" from="LevelVBox/MiningGridbox/MineCoal" to="LevelVBox/MiningGridbox" method="_on_mine_coal_pressed"]
 [connection signal="timeout" from="LevelVBox/MiningGridbox/MineCoal/MineCoalTimer" to="LevelVBox/MiningGridbox" method="_on_mine_coal_timer_timeout"]
 [connection signal="pressed" from="LevelVBox/MiningGridbox/MineIronOre" to="LevelVBox/MiningGridbox" method="_on_mine_iron_ore_pressed"]
 [connection signal="timeout" from="LevelVBox/MiningGridbox/MineIronOre/MineIronOreTimer" to="LevelVBox/MiningGridbox" method="_on_mine_iron_ore_timer_timeout"]
 [connection signal="timeout" from="LevelVBox/MiningGridbox/MineIronOre/MineIronOreTimer" to="LevelVBox/MiningGridbox" method="_on_mine_coal_timer_timeout"]
 [connection signal="pressed" from="EndDay" to="." method="_on_end_day_pressed"]
+[connection signal="pressed" from="SceneTransitionPanel/HBoxContainer/TraderTransition" to="." method="_on_trader_transition_pressed"]
+[connection signal="pressed" from="SceneTransitionPanel/HBoxContainer/SmithyTransition" to="." method="_on_smithy_transition_pressed"]

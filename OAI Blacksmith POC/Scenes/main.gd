@@ -11,12 +11,19 @@ func _ready() -> void:
 	current_scene = game_start
 	EventBus.scene_transition.connect(_on_transition_scene)
 
-func _on_transition_scene(scene):
+func _on_transition_scene(scene: PackedScene):
+	print("scene at start is: ", scene)
 	await fade(1.0, 1.5).finished
-	current_scene.queue_free()
 	var new_scene = scene.instantiate()
+	print("1st print: new scene = ", new_scene, " : current scene =  ", current_scene)
+	current_scene.queue_free()
+	print("2nd print: new scene = ", new_scene, " : current scene =  ", current_scene)
 	add_child(new_scene)
+	print("3rd print: new scene = ", new_scene, " : current scene =  ", current_scene)
+	current_scene = new_scene
+	print("4th print: new scene = ", new_scene, " : current scene =  ", current_scene)
 	fade(0.0, 1.5)
+
 
 
 func fade(target_alpha: float, duration: float = 1.0):
